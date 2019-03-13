@@ -47,10 +47,10 @@ export default class Lyric {
       if (result) {
         const txt = line.replace(timeExp, '').trim()
         if (txt) {
-          let tirdResult = result[3] || '0'; 
-          let length = tirdResult.length;
-          let __tirdResult = parseInt(tirdResult, 10);
-          __tirdResult = length > 2 ? __tirdResult : __tirdResult * 10; 
+          let tirdResult = result[3] || '0'
+          let length = tirdResult.length
+          let __tirdResult = parseInt(tirdResult, 10)
+          __tirdResult = length > 2 ? __tirdResult : __tirdResult * 10
           this.lines.push({
             time: result[1] * 60 * 1000 + result[2] * 1000 + __tirdResult,
             txt
