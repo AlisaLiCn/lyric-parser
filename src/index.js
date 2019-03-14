@@ -131,6 +131,16 @@ export default class Lyric {
     clearTimeout(this.timer)
   }
 
+  destroy() {
+    this.lrc = null
+    this.tags = null
+    this.lines = null
+    this.handler = null
+    this.state = STATE_PAUSE
+    this.curLine = 0
+    clearTimeout(this.timer)
+  }
+
   seek(offset) {
     this.play(offset)
   }

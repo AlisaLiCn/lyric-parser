@@ -384,6 +384,17 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
         clearTimeout(this.timer);
       }
     }, {
+      key: 'destroy',
+      value: function destroy() {
+        this.lrc = null;
+        this.tags = null;
+        this.lines = null;
+        this.handler = null;
+        this.state = STATE_PAUSE;
+        this.curLine = 0;
+        clearTimeout(this.timer);
+      }
+    }, {
       key: 'seek',
       value: function seek(offset) {
         this.play(offset);
